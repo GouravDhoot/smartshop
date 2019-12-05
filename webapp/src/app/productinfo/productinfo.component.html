@@ -1,0 +1,70 @@
+
+
+<div class="container-fluid mb-5">
+        <div class="card-deck" >
+            <div class="col-12 col-md-6 col-lg-3"  *ngFor="let product of productList">
+                <div class="card" >
+                    <img
+                        src="{{product.productImage}}"
+                        class="card-img-top" alt="missing" />
+                    <div class="card-body">
+                        <div class="row">
+                                
+                            <label for="name"><h5 id="name">{{product.productName}}<br>({{product.brand}})</h5></label> <span
+                                class="ml-auto" id="price"><label for="price">&#8377;{{product.ratePerQuantity}}</label></span>
+                        </div>
+
+                        <div class="row">
+                            <label for="Product_Code"><h6>PRODUCT CODE: {{product.productCode}}</h6></label>
+                        </div>
+
+                        <div class="row">
+                                <!-- <span class="badge badge-success mb-3 mr-1" id="active"><label
+                                    for="active" *ngIf="product.stock !='0'"> active</label></span>
+                                    <span class="badge badge-danger mb-3 mr-1" id="active"><label
+                                        for="active" *ngIf="product.stock =='0'"> inactive</label></span> -->
+                            <span id="category"><label for="category"><h6>Category: {{product.productType}}</h6></label></span>
+                        </div>
+                        
+                      
+                            <div class="row">
+                                
+                                    <label for="name">Aisle: {{product.aisle}}</label> <span
+                                        class="ml-auto"><label for="price">Shelf: {{product.shelf}}</label></span>
+                                </div>
+                                <div class="row">
+                                        <i class="material-icons">access_time</i><span id="dateofLaunch"><label
+                                            for="dateofLaunch">Launch  </label>
+                                        <span class="ml-auto">  {{product.dateOfExpiry | date}}</span></span>
+                                    </div>
+
+                        <!-- <div class="row" *ngIf="!isAdmin">
+                            <a  id="truyum-addtocart" class="btn btn-warning mx-auto" (click)="addToCart(food,food.id)">
+                                <i class="material-icons">add_shopping_cart</i> Add to Cart
+                            </a>
+                        </div> -->
+                        <div class="row" *ngIf="isAdmin">
+                                
+                                     <a [routerLink]="['/product-edit',product.productCode]" id="smartShop-addtocart" class="btn btn-warning ml-auto">
+                                            <i class="material-icons">edit</i> Edit
+                                    </a>
+                                    <button type="button" class="btn btn-success ml-auto" id="smartShop-addtocart" (click)="deleteProduct(product.productCode)">    <i class="material-icons">delete</i>Delete</button>
+                                    <!-- <button (click)="increment()">Increment</button>
+                                    <button (click)="decrement()">Decrement</button>
+                                    <div></div>
+                                    {{counter}}     -->
+                                    
+
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div><br>
+    <div class="container" *ngIf="added">
+            <div class="alert alert-success">Added to cart
+                successfully</div>
+        </div>

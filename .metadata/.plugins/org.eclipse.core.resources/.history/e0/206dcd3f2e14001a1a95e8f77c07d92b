@@ -1,0 +1,49 @@
+package com.cognizant.smartshop.service;
+
+import java.sql.Date;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.cognizant.smartshop.model.Bill;
+import com.cognizant.smartshop.model.Product;
+import com.cognizant.smartshop.model.User;
+import com.cognizant.smartshop.repository.ProductRepository;
+import com.cognizant.smartshop.repository.UserRepository;
+
+@Service
+public class BillService {
+
+	@Autowired
+	UserRepository userRepository;
+	@Autowired
+	ProductRepository productRepository;
+	
+	public void addToBill(String contact,  String productCode, String quantity)
+	{
+		User user = userRepository.findByContactNumber(contact);
+		//System.out.println(user);
+		Product product = productRepository.findById(productCode).get();
+		Set<Bill> bills = user.getBill();
+		//System.out.println(bills);
+		Bill bill = new Bill();
+		bill.setUser(user);
+		bill.setProduct(product);
+		bill.setQuantity(Integer.parseInt(quantity));
+		bill.setPurchase_date(new Date(System.currentTimeMillis()));
+		bills.add(bill);
+		System.out.println(bills);
+		user.setBill(bills);
+		userRepository.save(user);
+		//System.out.println(product);
+		//System.out.println(user.getBill());
+		
+	}
+	
+	public Set<Bill> getBillHistory(String userId){
+		return userRepository.findByUsername(userId).getBill();
+		
+	}
+}

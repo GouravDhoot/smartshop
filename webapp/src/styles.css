@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+#smartshop-nav-logo ,#smartshop-heading{
+	width:20px;
+	color:white;
+}
+i {
+	vertical-align:middle;
+}
+
+#smartshop-heading {
+	font-weight:bold;
+}
+
+#truyum-navbar-menus {
+	color:white;
+	font-weight:bold;
+}
+
+#smartshop-allpages-footer {
+	background-color: black;
+	font-size: 16px;
+	font-weight:bold;
+	color: white;
+}
+
+#price {
+	font-family:Arial;
+	color:red;
+}
+
+.row {
+
+	margin-top:2px;
+}
+
+.card {
+	margin-bottom:5px;
+	padding: 1px;
+	width: auto;
+	color: black;
+	background-color:white;
+}
+
+.jumbotron {
+	background-color: black;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+}
+body {
+	background-color: black;
+	color:white;
+  }
+  
+small{
+	color:red;
+}
+
+#smartShop-addtocart{
+	width:100%;
+}
+navbar{
+	background-color: black;
+	color:white;
+}

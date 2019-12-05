@@ -1,0 +1,85 @@
+<div class="container border col-6 mt-5 pb-3 mb-5">
+    <h3>Signup</h3>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <label for="userId">User ID</label><div> <input id="userId"
+          type="text" [formControl]="userId" placeholder="user ID" /></div>
+          <div *ngIf="userId.invalid && (userId.touched || userId.dirty)">
+            <small *ngIf="userId.errors.required" >Username field is required</small>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class=" col-lg-6 col-md-6 col-sm-12">
+        <label for="firstName">First name</label><div> <input id="firstName"
+          type="text" [formControl]="firstName" placeholder="Enter first name" /></div>
+          <div *ngIf="firstName.invalid && (firstName.touched || firstName.dirty)">
+            <small *ngIf="firstName.errors.required" >Firstname field is required</small>
+            <small *ngIf="firstName.errors.pattern" >Firstname field shouldnt contain numbers</small>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <label for="lastName">Last name</label> <div><input id="lastName"
+          type="text" [formControl]="lastName" placeholder="Enter last name" /></div>
+          <div *ngIf="lastName.invalid && (lastName.touched || lastName.dirty)">
+            <small *ngIf="lastName.errors.required" >Lastname field is required</small>
+            <small *ngIf="lastName.errors.pattern" >Lastname field shouldnt contain numbers</small>
+  
+        </div>
+      </div>
+    
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <label for="age">Age</label><div><input id="age"
+              type="text" [formControl]="age" placeholder="Enter age" /></div>
+              <div *ngIf="age.invalid && (age.touched || age.dirty)">
+                <small *ngIf="age.errors.required" >age field is required</small>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+            <label for="gender">Gender</label><div> 
+                <select [formControl]="gender" style="width: 100%; border: solid"
+                id="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <div *ngIf="gender.invalid && (gender.touched || gender.dirty)">
+                    <small *ngIf="gender.errors.required" >Choose a gender</small>
+                </div></div>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <label for="contactNumber">ContactNumber</label> <div><input id="contactNumber"
+              type="text" [formControl]="contactNumber" placeholder="Enter contact Number" /></div>
+              <div *ngIf="contactNumber.invalid && (contactNumber.touched || contactNumber.dirty)">
+                <small *ngIf="contactNumber.errors.required" >Lastname field is required</small>
+            </div>
+          </div>
+
+
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <label for="pass">Password</label><div> <input id="pass" type="password"
+        [formControl]="password" placeholder="Enter password" /></div>
+        <div *ngIf="password.invalid && (password.touched || password.dirty)">
+          <small *ngIf="password.errors.required" >Password field is required</small>
+      </div>
+      </div>
+      <!-- <div class="col-lg-6 col-md-6 col-sm-12">
+        <label for="cpass">Confirm password</label><div> <input id="cpass"
+          type="password" [formControl]="confirm_password"
+          placeholder="Enter confirm password" /></div>
+          <div *ngIf="confirm_password.invalid && (confirm_password.touched || confirm_password.dirty)">
+            <small *ngIf="confirm_password.errors.required" >Confirm Password field is required</small>
+        </div>
+      </div> -->
+    </div>
+    <div class="row">
+      <button type="submit" class="btn btn-success ml-3 mt-2">Signup</button>
+    </div>
+  </form>
+  </div>

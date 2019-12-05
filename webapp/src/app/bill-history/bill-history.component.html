@@ -1,0 +1,34 @@
+<div class="jumbotron">
+            Select date<br>
+<input type="date" [(ngModel)]="date" (change)="dateChange()"/>
+ <div class="card mt-5">
+        <table class="table">
+          <tr>
+                
+                <th class="ml-5">Product Name</th>
+                <th class="ml-5">Purchase Date</th>
+                <th class="ml-5">Quantity</th>
+                <th class="ml-5">Rate per quantity</th>
+               
+                <th class="ml-5">Total</th>
+
+          </tr>
+          <tr *ngFor="let bill of fillteredList">
+                <td class="ml-5">{{bill.product.productName}}</td>
+                <td class="ml-5">{{bill.purchase_date| date}}</td>
+                <td class="ml-5">{{bill.quantity}}</td>
+                <td class="ml-5">{{bill.product.ratePerQuantity}}</td>
+                       <td class="ml-5">{{bill.quantity*bill.product.ratePerQuantity}}</td>
+          </tr>
+           <tr>
+                <th class="ml-5" id="price" >Grand Total</th>
+                <th class="ml-5"></th>
+                <th class="ml-5"></th>
+                <th class="ml-5"></th>
+                <th class="ml-5" id="price">{{total}}</th>
+             </tr> 
+        </table>
+</div>
+
+ 
+</div>

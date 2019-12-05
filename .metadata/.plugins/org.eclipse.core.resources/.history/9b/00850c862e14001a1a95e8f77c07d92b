@@ -1,0 +1,21 @@
+package com.cognizant.smartshop.controller;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cognizant.smartshop.model.User;
+import com.cognizant.smartshop.service.SuperUserService;
+
+@RestController
+public class SuperUserController {
+
+	@Autowired
+	SuperUserService superUserService;
+	@GetMapping("/shopmanagers")
+	public Set<User> getAllManagers(){
+		return superUserService.getAllManagers();
+	}
+}

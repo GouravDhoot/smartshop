@@ -1,0 +1,46 @@
+package com.cognizant.products.service;
+
+
+
+import java.util.ArrayList;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cognizant.products.model.Product;
+import com.cognizant.products.repository.ProductRepository;
+
+@Service
+public class ProductService {
+
+	@Autowired
+	ProductRepository productRepository;
+	
+	public Set<Object> getProductType(){
+		return productRepository.getProductType();
+	}
+	
+	public ArrayList<Product> getProducts(String productType) {
+		return productRepository.getProducts(productType);
+	}
+	public ArrayList<Product> getAllProducts() {
+		return  productRepository.getAllProducts();
+	}
+	
+	public Product getProduct(String code) {
+		return productRepository.findById(code).get();
+	}
+	
+	public Product modifyProduct(Product product) {
+		return productRepository.save(product);
+	}
+	
+	public Product addProduct(Product product) {
+		return productRepository.save(product);
+		
+	}
+	public void deleteProduct(String code){
+		productRepository.deleteById(code);
+	}
+}

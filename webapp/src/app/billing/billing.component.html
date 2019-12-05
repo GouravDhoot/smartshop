@@ -1,0 +1,51 @@
+<div class="jumbotron">
+        <h3 class="text-light">Products</h3>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text material-icons">shopping_cart</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Search Foods" [(ngModel)]="searchtext" (input)="search()">
+           
+        </div>
+        <ul *ngIf="searchtext">
+                <li *ngFor="let product of filteredProduct"><button (click)="addToCart(product)">{{product.productName}}</button></li>
+            </ul>
+       
+    </div>
+    <input type="text" [(ngModel)]="contact"/>
+    <div class="card mt-5">
+            <table class="table">
+              <tr>
+                    <th class="ml-5">Product Code</th>
+                    <th class="ml-5">Product Name</th>
+                    <th class="ml-5">Rate per quantity</th>
+                    <th class="ml-5">Quantity</th>
+                    <th class="ml-5">Total</th>
+
+              </tr>
+              <tr *ngFor="let product of cartProducts">
+                    <td class="ml-5">{{product.productCode}}</td>
+                    <td class="ml-5">{{product.productName}}</td>
+                   <td class="ml-5">{{product.ratePerQuantity}}</td>
+                   <td class="ml-5"> <button id="decrement" (click)='remove(product)'  >
+                        <i class="material-icons">remove_circle</i>
+                            </button>
+                        <input type="text" id="quantity" name="Quantity" value="{{product.quantity}}"  class="quantity" size="3"/>
+                           <button id="increment" (click)='add(product)' [disabled]="product.quantity==product.stock">
+                             <i class="material-icons">add_circle</i>
+                           </button>
+                           <div><small *ngIf="product.quantity==product.stock">Out Of Stock</small></div>
+                        </td>
+                           <td class="ml-5">{{product.quantity*product.ratePerQuantity}}</td>
+       
+              </tr>
+              <tr>
+                    <td class="ml-5"><button  type="button" [disabled]="contact==null" class="btn btn-success ml-3 mt-2" (click)="bill()">Bill</button></td>
+                    <td class="ml-5"></td>
+                    <td class="ml-5"></td>
+                    <td class="ml-5"></td>
+                    <td class="ml-5">{{total}}</td>
+                 </tr>
+            </table>
+    </div>
+   

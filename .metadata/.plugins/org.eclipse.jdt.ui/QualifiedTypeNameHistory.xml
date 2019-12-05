@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.cognizant.authentication.service.AppUserDetailsService"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="com.cognizant.smartshop.model.Bill"/>
+<fullyQualifiedTypeName name="com.cognizant.authentication.model.Bill"/>
+<fullyQualifiedTypeName name="com.cognizant.authentication.repository.UserRepository"/>
+<fullyQualifiedTypeName name="com.cognizant.authentication.repository.RoleRepository"/>
+<fullyQualifiedTypeName name="com.cognizant.authentication.model.Role"/>
+<fullyQualifiedTypeName name="com.cognizant.authentication.model.User"/>
+<fullyQualifiedTypeName name="com.cognizant.authentication.exception.UserAlreadyExistsException"/>
+<fullyQualifiedTypeName name="com.cognizant.authentication.security.JwtAuthorizationFilter"/>
+<fullyQualifiedTypeName name="com.cognizant.authentication.AuthenticationApplication"/>
+<fullyQualifiedTypeName name="com.cognizant.products.exception.UserAlreadyExistsException"/>
+<fullyQualifiedTypeName name="com.cognizant.products.ProductsApplication"/>
+<fullyQualifiedTypeName name="com.cognizant.products.security.JwtAuthorizationFilter"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.client.discovery.EnableDiscoveryClient"/>
+<fullyQualifiedTypeName name="com.cognizant.products.service.ProductService"/>
+<fullyQualifiedTypeName name="com.cognizant.products.service.BillService"/>
+<fullyQualifiedTypeName name="com.cognizant.products.service.SuperUserService"/>
+<fullyQualifiedTypeName name="com.cognizant.products.service.AppUserDetailsService"/>
+<fullyQualifiedTypeName name="com.cognizant.products.repository.ProductRepository"/>
+<fullyQualifiedTypeName name="com.cognizant.products.model.Role"/>
+<fullyQualifiedTypeName name="com.cognizant.products.repository.RoleRepository"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+<fullyQualifiedTypeName name="com.cognizant.products.model.User"/>
+<fullyQualifiedTypeName name="com.cognizant.products.ProductsApplicationTests"/>
+<fullyQualifiedTypeName name="com.cognizant.products.repository.UserRepository"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+<fullyQualifiedTypeName name="org.springframework.test.context.junit.jupiter.SpringExtension"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.extension.ExtendWith"/>
+<fullyQualifiedTypeName name="org.junit.platform.commons.annotation.Testable"/>
+</qualifiedTypeNameHistroy>

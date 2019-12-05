@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.cognizant.smartshop.SmartshopApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.093 s - in com.cognizant.smartshop.SmartshopApplicationTests
